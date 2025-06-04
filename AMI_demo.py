@@ -3,7 +3,7 @@ import speech_recognition as sr
 import pyttsx3
 
 # Initialize Claude client with your API key
-client = anthropic.Anthropic(api_key="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")
+client = anthropic.Anthropic(api_key="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")
 
 # Initialize recognizer and text-to-speech
 recognizer = sr.Recognizer()
@@ -28,7 +28,7 @@ def listen():
 
 def ask_claude(prompt):
     response = client.messages.create(
-        model="claude-3-opus-20240229",  # You can also try "claude-3-sonnet-20240229" or "claude-3-haiku-20240307"
+        model="claude-3-opus-20240229",  # Or use another Claude 3 model available to you
         max_tokens=200,
         messages=[
             {"role": "user", "content": prompt}
